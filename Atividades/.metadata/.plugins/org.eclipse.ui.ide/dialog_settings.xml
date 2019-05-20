@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\i3i\Desktop\Imagem"/>
+	</list>
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\i3i\Desktop\Atividades\Avaliação III"/>
+			<item value="C:\Users\i3i\Desktop\Atividades\Atividade02"/>
+			<item value="C:\Users\i3i\Desktop\Atividades\Atividade01"/>
+			<item value="C:\Users\i3i\Desktop\Atividades\17Random"/>
+			<item value="C:\Users\i3i\Desktop\Atividades\18LocalDateTime"/>
+			<item value="C:\Users\i3i\Desktop\Atividades\15String"/>
+			<item value="C:\Users\i3i\Desktop\Atividades\16Math"/>
+			<item value="C:\Users\i3i\Desktop\Imagem"/>
+			<item value="C:\Users\i3i\Desktop\04AtividadesVetores"/>
+			<item value="C:\Users\i3i\Desktop\07AtividadesVetores"/>
+			<item value="C:\Users\i3i\Desktop\Atividades\04AtividadesVetores"/>
+			<item value="C:\Users\i3i\Desktop\Atividades\Prova1"/>
+			<item value="C:\Users\i3i\Desktop\Atividades\02Laços"/>
+			<item value="C:\Users\i3i\Desktop\Atividades\01Lógica e Algoritmos"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+		</list>
+	</section>
+</section>

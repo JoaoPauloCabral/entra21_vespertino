@@ -1,0 +1,71 @@
+package beans;
+
+public class Produtos {
+
+	private String batata, feijao, arroz, macarrao, cenoura, maca, queijo, presunto;
+
+	public String getBatata() {
+		return batata;
+	}
+
+	public void setBatata(String batata) {
+		this.batata = batata;
+	}
+
+	public String getFeijao() {
+		return feijao;
+	}
+
+	public void setFeijao(String feijao) {
+		this.feijao = feijao;
+	}
+
+	public String getArroz() {
+		return arroz;
+	}
+
+	public void setArroz(String arroz) {
+		this.arroz = arroz;
+	}
+
+	public String getMacarrao() {
+		return macarrao;
+	}
+
+	public void setMacarrao(String macarrao) {
+		this.macarrao = macarrao;
+	}
+
+	public String getCenoura() {
+		return cenoura;
+	}
+
+	public void setCenoura(String cenoura) {
+		this.cenoura = cenoura;
+	}
+
+	public String getMaca() {
+		return maca;
+	}
+
+	public void setMaca(String maca) {
+		this.maca = maca;
+	}
+
+	public String getQueijo() {
+		return queijo;
+	}
+
+	public void setQueijo(String queijo) {
+		this.queijo = queijo;
+	}
+
+	public String getPresunto() {
+		return presunto;
+	}
+
+	public void setPresunto(String presunto) {
+		this.presunto = presunto;
+	}
+	
+}

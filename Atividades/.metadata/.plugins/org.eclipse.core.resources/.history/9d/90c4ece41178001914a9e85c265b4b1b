@@ -1,0 +1,15 @@
+package acao;
+
+
+import beans.Produtos;
+import dados.Array;
+
+
+public class Acao {
+
+	public void cadastrar(Produtos c) {
+		Array.array1.add(c);
+		
+	}
+	
+}

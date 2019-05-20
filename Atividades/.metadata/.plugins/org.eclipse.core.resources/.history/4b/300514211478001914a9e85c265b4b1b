@@ -1,0 +1,75 @@
+package formularios;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
+import java.awt.Font;
+
+public class FLista extends JFrame {
+
+	private JPanel contentPane;
+
+	public FLista() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 340, 438);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JButton btnSair = new JButton("FECHAR");
+		btnSair.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			setVisible(true);
+			
+			}
+		});
+		btnSair.setBounds(221, 11, 89, 23);
+		contentPane.add(btnSair);
+		
+		JLabel lblQtdDeCada = new JLabel("QTD  de cada Produto");
+		lblQtdDeCada.setFont(new Font("Tahoma", Font.PLAIN, 17));
+		lblQtdDeCada.setBounds(10, 15, 201, 45);
+		contentPane.add(lblQtdDeCada);
+		
+		JLabel lblFeijo = new JLabel("Feij\u00E3o: ");
+		lblFeijo.setBounds(10, 71, 136, 23);
+		contentPane.add(lblFeijo);
+		
+		JLabel label = new JLabel("Feij\u00E3o: ");
+		label.setBounds(10, 105, 136, 23);
+		contentPane.add(label);
+		
+		JLabel label_1 = new JLabel("Feij\u00E3o: ");
+		label_1.setBounds(10, 139, 136, 23);
+		contentPane.add(label_1);
+		
+		JLabel label_2 = new JLabel("Feij\u00E3o: ");
+		label_2.setBounds(10, 173, 136, 23);
+		contentPane.add(label_2);
+		
+		JLabel label_3 = new JLabel("Feij\u00E3o: ");
+		label_3.setBounds(10, 207, 136, 23);
+		contentPane.add(label_3);
+		
+		JLabel label_4 = new JLabel("Feij\u00E3o: ");
+		label_4.setBounds(10, 241, 136, 23);
+		contentPane.add(label_4);
+		
+		JLabel label_5 = new JLabel("Feij\u00E3o: ");
+		label_5.setBounds(10, 275, 136, 23);
+		contentPane.add(label_5);
+		
+		JLabel label_6 = new JLabel("Feij\u00E3o: ");
+		label_6.setBounds(10, 309, 136, 23);
+		contentPane.add(label_6);
+	}
+
+}

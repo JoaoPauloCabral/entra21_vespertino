@@ -1,0 +1,64 @@
+package acao;
+
+
+import beans.Produtos;
+import dados.Array;
+
+
+public class Acao {
+
+	public void cadastrar(Produtos c) {
+		Array.array1.add(c);
+		
+	}
+	
+	int arroz1=0, maca1=0, batata1=0, feijao1=0, macarrao1=0, cenoura1=0, queijo1=0, presunto1=0;
+	
+	public  int arroz (boolean j) {
+		
+		if(j == true) {
+			arroz1++;
+		}else if((j == false) && (arroz1 > 0)) {
+			arroz1--;
+		}
+		
+		return arroz1;
+	}
+	
+	public  int maca (boolean j) {
+		
+		if(j == true) {
+			maca1++;
+		}else if((j == false) && (maca1 > 0)) {
+			maca1--;
+		}
+		
+		return maca1;
+	}
+	
+	public  int feijao (boolean j) {
+		
+		if(j == true) {
+			feijao1++;
+		}else if((j == false) && (feijao1 > 0)) {
+			feijao1--;
+		}
+		
+		return feijao1;
+	}
+	
+	
+	
+	
+	
+	
+	
+	public int somar() {
+		
+		int soma = arroz1+maca1;
+		
+		return soma;
+	}
+	
+
+}

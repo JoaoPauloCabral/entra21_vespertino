@@ -1,0 +1,119 @@
+package acao;
+
+
+import beans.Produtos;
+import dados.Array;
+
+
+public class Acao {
+
+	public void cadastrar(Produtos c) {
+		Array.array1.add(c);
+		
+	}
+	
+	int arroz1=0, maca1=0, batata1=0, feijao1=0, macarrao1=0, cenoura1=0, queijo1=0, presunto1=0;
+	
+	public  int arroz (boolean j) {
+		
+		if(j == true) {
+			arroz1++;
+		}else if((j == false) && (arroz1 > 0)) {
+			arroz1--;
+		}
+		
+		return arroz1;
+	}
+	
+	public  int maca (boolean j) {
+		
+		if(j == true) {
+			maca1++;
+		}else if((j == false) && (maca1 > 0)) {
+			maca1--;
+		}
+		
+		return maca1;
+	}
+	
+	public  int feijao (boolean j) {
+		
+		if(j == true) {
+			feijao1++;
+		}else if((j == false) && (feijao1 > 0)) {
+			feijao1--;
+		}
+		
+		return feijao1;
+	}
+	
+	public  int batata (boolean j) {
+		
+		if(j == true) {
+			batata1++;
+		}else if((j == false) && (batata1 > 0)) {
+			batata1--;
+		}
+		
+		return batata1;
+	}
+	
+	public  int queijo (boolean j) {
+		
+		if(j == true) {
+			queijo1++;
+		}else if((j == false) && (queijo1 > 0)) {
+			queijo1--;
+		}
+		
+		return queijo1;
+	}
+	
+	public  int presunto (boolean j) {
+		
+		if(j == true) {
+			presunto1++;
+		}else if((j == false) && (presunto1 > 0)) {
+			presunto1--;
+		}
+		
+		return presunto1;
+	}
+	
+	
+	public  int cenoura (boolean j) {
+		
+		if(j == true) {
+			cenoura1++;
+		}else if((j == false) && (cenoura1 > 0)) {
+			cenoura1--;
+		}
+		
+		return cenoura1;
+	}
+	
+	public  int macarrao (boolean j) {
+		
+		if(j == true) {
+			macarrao1++;
+		}else if((j == false) && (macarrao1 > 0)) {
+			macarrao1--;
+		}
+		
+		return macarrao1;
+	}
+	
+	
+	
+	
+	
+	
+	public int somar() {
+		
+		int soma = arroz1+maca1+feijao1+macarrao1+cenoura1+queijo1+presunto1+batata1;
+		
+		return soma;
+	}
+	
+
+}

@@ -1,0 +1,118 @@
+package formularios;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import acao.Acao;
+
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
+import javax.swing.border.LineBorder;
+import java.awt.Color;
+import java.awt.Font;
+
+public class Estatistica extends JFrame {
+
+	private JPanel contentPane;
+	
+	public Estatistica() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 342, 521);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		Acao a = new Acao();
+		
+		JButton btnSair = new JButton("SAIR");
+		btnSair.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			
+				setVisible(false);
+				
+			}
+		});
+		btnSair.setBounds(239, 447, 89, 23);
+		contentPane.add(btnSair);
+		
+		JLabel lblNumeroDeFuncionarios = new JLabel("N\u00FAmero de funcion\u00E1rios por cargo");
+		lblNumeroDeFuncionarios.setFont(new Font("Tahoma", Font.BOLD, 13));
+		lblNumeroDeFuncionarios.setBounds(23, 11, 239, 23);
+		contentPane.add(lblNumeroDeFuncionarios);
+		
+		JPanel panel = new JPanel();
+		panel.setBorder(new LineBorder(new Color(0, 0, 0)));
+		panel.setBounds(10, 11, 306, 238);
+		contentPane.add(panel);
+		panel.setLayout(null);
+		
+		JLabel lblArquitetoDeSistemas = new JLabel("Arquiteto de sistemas: "+a.cargos().get(7));
+		lblArquitetoDeSistemas.setBounds(10, 213, 226, 14);
+		panel.add(lblArquitetoDeSistemas);
+		
+		JLabel lblAnalistaSenior = new JLabel("Analista Senior: "+a.cargos().get(6));
+		lblAnalistaSenior.setBounds(10, 184, 226, 14);
+		panel.add(lblAnalistaSenior);
+		
+		JLabel lblAnalistaPleno = new JLabel("Analista Pleno: "+a.cargos().get(5));
+		lblAnalistaPleno.setBounds(10, 159, 226, 14);
+		panel.add(lblAnalistaPleno);
+		
+		JLabel lblAnalistaJr = new JLabel("Analista Jr: "+a.cargos().get(4));
+		lblAnalistaJr.setBounds(10, 134, 226, 14);
+		panel.add(lblAnalistaJr);
+		
+		JLabel lblDesenvolvedorSenior = new JLabel("Desenvolvedor Senior: "+a.cargos().get(3));
+		lblDesenvolvedorSenior.setBounds(10, 109, 226, 14);
+		panel.add(lblDesenvolvedorSenior);
+		
+		JLabel lblDesenvolvedorPleno = new JLabel("Desenvolvedor Pleno: "+a.cargos().get(2));
+		lblDesenvolvedorPleno.setBounds(10, 84, 226, 14);
+		panel.add(lblDesenvolvedorPleno);
+		
+		JLabel lblNewLabel = new JLabel("Desenvolvedor Jr: "+a.cargos().get(1));
+		lblNewLabel.setBounds(10, 59, 226, 14);
+		panel.add(lblNewLabel);
+		
+		JLabel lblEstagiario = new JLabel("Estagiario: "+a.cargos().get(0));
+		lblEstagiario.setBounds(10, 34, 226, 14);
+		panel.add(lblEstagiario);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBorder(new LineBorder(new Color(0, 0, 0)));
+		panel_1.setBounds(10, 260, 306, 64);
+		contentPane.add(panel_1);
+		panel_1.setLayout(null);
+		
+		JLabel lblNmeroDeFuncionrios = new JLabel("N\u00FAmero de funcion\u00E1rios que usam Vale Transporte");
+		lblNmeroDeFuncionrios.setBounds(5, 0, 295, 23);
+		panel_1.add(lblNmeroDeFuncionrios);
+		lblNmeroDeFuncionrios.setFont(new Font("Tahoma", Font.BOLD, 11));
+		
+		JLabel lblNewLabel_1 = new JLabel(a.vales().get(0)+ " funcion\u00E1rios");
+		lblNewLabel_1.setBounds(9, 34, 89, 23);
+		panel_1.add(lblNewLabel_1);
+		
+		JPanel panel_2 = new JPanel();
+		panel_2.setLayout(null);
+		panel_2.setBorder(new LineBorder(new Color(0, 0, 0)));
+		panel_2.setBounds(10, 336, 306, 64);
+		contentPane.add(panel_2);
+		
+		JLabel lblNmeroDeFuncionrios_1 = new JLabel("N\u00FAmero de funcion\u00E1rios que aderiram o Clube ");
+		lblNmeroDeFuncionrios_1.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblNmeroDeFuncionrios_1.setBounds(5, 0, 295, 23);
+		panel_2.add(lblNmeroDeFuncionrios_1);
+		
+		JLabel label_1 = new JLabel( a.clubes().get(0)+" funcion\u00E1rios");
+		label_1.setBounds(9, 34, 89, 23);
+		panel_2.add(label_1);
+	}
+}

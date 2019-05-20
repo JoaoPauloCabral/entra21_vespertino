@@ -1,0 +1,84 @@
+package formularios;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+import javax.swing.JButton;
+
+public class FPrincipal extends JFrame {
+
+	private JPanel contentPane;
+
+	public FPrincipal() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 605, 264);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblArroz = new JLabel("Arroz");
+		lblArroz.setHorizontalAlignment(SwingConstants.CENTER);
+		lblArroz.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblArroz.setBounds(37, 10, 103, 55);
+		contentPane.add(lblArroz);
+		
+		JLabel lblFeijo = new JLabel("Feij\u00E3o");
+		lblFeijo.setHorizontalAlignment(SwingConstants.CENTER);
+		lblFeijo.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblFeijo.setBounds(151, 11, 103, 55);
+		contentPane.add(lblFeijo);
+		
+		JLabel lblMacarro = new JLabel("Macarr\u00E3o");
+		lblMacarro.setHorizontalAlignment(SwingConstants.CENTER);
+		lblMacarro.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblMacarro.setBounds(264, 11, 103, 55);
+		contentPane.add(lblMacarro);
+		
+		JLabel lblBatata = new JLabel("Batata");
+		lblBatata.setHorizontalAlignment(SwingConstants.CENTER);
+		lblBatata.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblBatata.setBounds(377, 11, 103, 55);
+		contentPane.add(lblBatata);
+		
+		JLabel lblCenoura = new JLabel("Cenoura");
+		lblCenoura.setHorizontalAlignment(SwingConstants.CENTER);
+		lblCenoura.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblCenoura.setBounds(38, 117, 103, 55);
+		contentPane.add(lblCenoura);
+		
+		JLabel lblMa = new JLabel("Ma\u00E7\u00E3");
+		lblMa.setHorizontalAlignment(SwingConstants.CENTER);
+		lblMa.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblMa.setBounds(151, 117, 103, 55);
+		contentPane.add(lblMa);
+		
+		JLabel lblQueijo = new JLabel("Queijo");
+		lblQueijo.setHorizontalAlignment(SwingConstants.CENTER);
+		lblQueijo.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblQueijo.setBounds(264, 117, 103, 55);
+		contentPane.add(lblQueijo);
+		
+		JLabel lblPresunto = new JLabel("Presunto");
+		lblPresunto.setHorizontalAlignment(SwingConstants.CENTER);
+		lblPresunto.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblPresunto.setBounds(377, 117, 103, 55);
+		contentPane.add(lblPresunto);
+		
+		JLabel lblNewLabel = new JLabel("0");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setBounds(511, 11, 56, 21);
+		contentPane.add(lblNewLabel);
+		
+		JButton btnNewButton = new JButton("+");
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		btnNewButton.setBounds(38, 56, 43, 40);
+		contentPane.add(btnNewButton);
+	}
+}

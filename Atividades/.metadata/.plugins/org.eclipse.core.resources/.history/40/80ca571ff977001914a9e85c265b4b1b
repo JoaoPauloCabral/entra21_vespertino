@@ -1,0 +1,78 @@
+package formularios;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import acao.Acao;
+
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
+
+public class Estatistica extends JFrame {
+
+	private JPanel contentPane;
+	
+	public Estatistica() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 460, 437);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		Acao a = new Acao();
+		
+		JButton btnSair = new JButton("SAIR");
+		btnSair.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			
+				setVisible(false);
+				
+			}
+		});
+		btnSair.setBounds(345, 11, 89, 23);
+		contentPane.add(btnSair);
+		
+		JLabel lblNumeroDeFuncionarios = new JLabel("Numero de funcionarios por cargo");
+		lblNumeroDeFuncionarios.setBounds(23, 11, 188, 23);
+		contentPane.add(lblNumeroDeFuncionarios);
+		
+		JLabel lblNewLabel = new JLabel("Desenvolvedor Jr: "+a.cargos().get(1));
+		lblNewLabel.setBounds(10, 71, 226, 14);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblDesenvolvedorPleno = new JLabel("Desenvolvedor Pleno: "+a.cargos().get(2));
+		lblDesenvolvedorPleno.setBounds(10, 97, 226, 14);
+		contentPane.add(lblDesenvolvedorPleno);
+		
+		JLabel lblDesenvolvedorSenior = new JLabel("Desenvolvedor Senior: "+a.cargos().get(3));
+		lblDesenvolvedorSenior.setBounds(10, 122, 226, 14);
+		contentPane.add(lblDesenvolvedorSenior);
+		
+		JLabel lblAnalistaJr = new JLabel("Analista Jr: "+a.cargos().get(4));
+		lblAnalistaJr.setBounds(10, 147, 226, 14);
+		contentPane.add(lblAnalistaJr);
+		
+		JLabel lblAnalistaPleno = new JLabel("Analista Pleno: "+a.cargos().get(5));
+		lblAnalistaPleno.setBounds(10, 172, 226, 14);
+		contentPane.add(lblAnalistaPleno);
+		
+		JLabel lblAnalistaSenior = new JLabel("Analista Senior: "+a.cargos().get(6));
+		lblAnalistaSenior.setBounds(10, 197, 226, 14);
+		contentPane.add(lblAnalistaSenior);
+		
+		JLabel lblArquitetoDeSistemas = new JLabel("Arquiteto de sistemas: "+a.cargos().get(7));
+		lblArquitetoDeSistemas.setBounds(10, 222, 226, 14);
+		contentPane.add(lblArquitetoDeSistemas);
+		
+		JLabel lblEstagiario = new JLabel("Estagiario: "+a.cargos().get(0));
+		lblEstagiario.setBounds(10, 46, 226, 14);
+		contentPane.add(lblEstagiario);
+	}
+}

@@ -1,0 +1,160 @@
+package formularios;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import acao.Acao;
+
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
+import javax.swing.border.LineBorder;
+import java.awt.Color;
+import java.awt.Font;
+
+public class Estatistica extends JFrame {
+
+	private JPanel contentPane;
+	
+	public Estatistica() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 342, 710);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		Acao a = new Acao();
+		
+		JButton btnSair = new JButton("SAIR");
+		btnSair.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			
+				setVisible(false);
+				
+			}
+		});
+		btnSair.setBounds(237, 648, 89, 23);
+		contentPane.add(btnSair);
+		
+		JLabel lblNumeroDeFuncionarios = new JLabel("N\u00FAmero de funcion\u00E1rios por cargo");
+		lblNumeroDeFuncionarios.setFont(new Font("Tahoma", Font.BOLD, 13));
+		lblNumeroDeFuncionarios.setBounds(23, 11, 239, 23);
+		contentPane.add(lblNumeroDeFuncionarios);
+		
+		JPanel panel = new JPanel();
+		panel.setBorder(new LineBorder(new Color(0, 0, 0)));
+		panel.setBounds(10, 11, 306, 238);
+		contentPane.add(panel);
+		panel.setLayout(null);
+		
+		JLabel lblArquitetoDeSistemas = new JLabel("Arquiteto de sistemas: "+a.cargos().get(7));
+		lblArquitetoDeSistemas.setBounds(10, 213, 226, 14);
+		panel.add(lblArquitetoDeSistemas);
+		
+		JLabel lblAnalistaSenior = new JLabel("Analista Senior: "+a.cargos().get(6));
+		lblAnalistaSenior.setBounds(10, 184, 226, 14);
+		panel.add(lblAnalistaSenior);
+		
+		JLabel lblAnalistaPleno = new JLabel("Analista Pleno: "+a.cargos().get(5));
+		lblAnalistaPleno.setBounds(10, 159, 226, 14);
+		panel.add(lblAnalistaPleno);
+		
+		JLabel lblAnalistaJr = new JLabel("Analista Jr: "+a.cargos().get(4));
+		lblAnalistaJr.setBounds(10, 134, 226, 14);
+		panel.add(lblAnalistaJr);
+		
+		JLabel lblDesenvolvedorSenior = new JLabel("Desenvolvedor Senior: "+a.cargos().get(3));
+		lblDesenvolvedorSenior.setBounds(10, 109, 226, 14);
+		panel.add(lblDesenvolvedorSenior);
+		
+		JLabel lblDesenvolvedorPleno = new JLabel("Desenvolvedor Pleno: "+a.cargos().get(2));
+		lblDesenvolvedorPleno.setBounds(10, 84, 226, 14);
+		panel.add(lblDesenvolvedorPleno);
+		
+		JLabel lblNewLabel = new JLabel("Desenvolvedor Jr: "+a.cargos().get(1));
+		lblNewLabel.setBounds(10, 59, 226, 14);
+		panel.add(lblNewLabel);
+		
+		JLabel lblEstagiario = new JLabel("Estagiario: "+a.cargos().get(0));
+		lblEstagiario.setBounds(10, 34, 226, 14);
+		panel.add(lblEstagiario);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBorder(new LineBorder(new Color(0, 0, 0)));
+		panel_1.setBounds(10, 260, 306, 64);
+		contentPane.add(panel_1);
+		panel_1.setLayout(null);
+		
+		JLabel lblNmeroDeFuncionrios = new JLabel("N\u00FAmero de funcion\u00E1rios que usam Vale Transporte");
+		lblNmeroDeFuncionrios.setBounds(5, 0, 295, 23);
+		panel_1.add(lblNmeroDeFuncionrios);
+		lblNmeroDeFuncionrios.setFont(new Font("Tahoma", Font.BOLD, 11));
+		
+		JLabel lblNewLabel_1 = new JLabel(a.vales().get(0)+ " funcion\u00E1rios");
+		lblNewLabel_1.setBounds(9, 34, 89, 23);
+		panel_1.add(lblNewLabel_1);
+		
+		JPanel panel_2 = new JPanel();
+		panel_2.setLayout(null);
+		panel_2.setBorder(new LineBorder(new Color(0, 0, 0)));
+		panel_2.setBounds(10, 336, 306, 64);
+		contentPane.add(panel_2);
+		
+		JLabel lblNmeroDeFuncionrios_1 = new JLabel("N\u00FAmero de funcion\u00E1rios que aderiram o Clube ");
+		lblNmeroDeFuncionrios_1.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblNmeroDeFuncionrios_1.setBounds(5, 0, 295, 23);
+		panel_2.add(lblNmeroDeFuncionrios_1);
+		
+		JLabel label_1 = new JLabel( a.clubes().get(0)+" funcion\u00E1rios");
+		label_1.setBounds(9, 34, 89, 23);
+		panel_2.add(label_1);
+		
+		JPanel panel_3 = new JPanel();
+		panel_3.setLayout(null);
+		panel_3.setBorder(new LineBorder(new Color(0, 0, 0)));
+		panel_3.setBounds(10, 411, 306, 64);
+		contentPane.add(panel_3);
+		
+		JLabel lblNmeroDeFuncionrios_2 = new JLabel("N\u00FAmero de funcion\u00E1rios que usam o Plano de Sa\u00FAde ");
+		lblNmeroDeFuncionrios_2.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblNmeroDeFuncionrios_2.setBounds(5, 0, 295, 23);
+		panel_3.add(lblNmeroDeFuncionrios_2);
+		
+		JLabel label_2 = new JLabel(a.saudes().get(0)+" funcion\u00E1rios");
+		label_2.setBounds(9, 34, 89, 23);
+		panel_3.add(label_2);
+		
+		JPanel panel_4 = new JPanel();
+		panel_4.setLayout(null);
+		panel_4.setBorder(new LineBorder(new Color(0, 0, 0)));
+		panel_4.setBounds(10, 486, 306, 151);
+		contentPane.add(panel_4);
+		
+		JLabel lblPorcentagemDeColaboradores = new JLabel("Porcentagem de colaboradores por faltas:");
+		lblPorcentagemDeColaboradores.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblPorcentagemDeColaboradores.setBounds(5, 0, 295, 23);
+		panel_4.add(lblPorcentagemDeColaboradores);
+		
+		JLabel lblNenhumaFalta = new JLabel("Nenhuma falta : "+a.faltas().get(0));
+		lblNenhumaFalta.setBounds(19, 34, 129, 23);
+		panel_4.add(lblNenhumaFalta);
+		
+		JLabel lblAtTrsFaltas = new JLabel("At\u00E9 tr\u00EAs faltas : "+a.faltas().get(1));
+		lblAtTrsFaltas.setBounds(158, 34, 106, 23);
+		panel_4.add(lblAtTrsFaltas);
+		
+		JLabel lblAtCincoFaltas = new JLabel("At\u00E9 cinco faltas : "+a.faltas().get(2));
+		lblAtCincoFaltas.setBounds(19, 68, 118, 23);
+		panel_4.add(lblAtCincoFaltas);
+		
+		JLabel lblAcimaDeCinco = new JLabel("Acima de cinco faltas : "+a.faltas().get(3));
+		lblAcimaDeCinco.setBounds(158, 68, 142, 23);
+		panel_4.add(lblAcimaDeCinco);
+	}
+}

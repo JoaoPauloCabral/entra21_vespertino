@@ -1,0 +1,147 @@
+package acao;
+
+
+import java.util.ArrayList;
+
+import beans.Produtos;
+import dados.Array;
+
+
+
+public class Acao {
+
+	//Cadastra
+	public void cadastrar(Produtos c) {
+		Array.array1.add(c);
+		
+	}
+	
+	 public static int arroz1=0, maca1=0, batata1=0, feijao1=0, macarrao1=0, cenoura1=0, queijo1=0, presunto1=0;
+	
+	//Pega o arroz
+	public  int arroz (boolean j) {
+		
+		if(j == true) {
+			arroz1++;
+		}else if((j == false) && (arroz1 > 0)) {
+			arroz1--;
+		}
+		
+		return arroz1;
+	}
+	
+	//Pega as maças 
+	public  int maca (boolean j) {
+		
+		if(j == true) {
+			maca1++;
+		}else if((j == false) && (maca1 > 0)) {
+			maca1--;
+		}
+		
+		return maca1;
+	}
+	
+	//Pega o feijão
+	public  int feijao (boolean j) {
+		
+		if(j == true) {
+			feijao1++;
+		}else if((j == false) && (feijao1 > 0)) {
+			feijao1--;
+		}
+		
+		return feijao1;
+	}
+	
+	//Pega a batata
+	public  int batata (boolean j) {
+		
+		if(j == true) {
+			batata1++;
+		}else if((j == false) && (batata1 > 0)) {
+			batata1--;
+		}
+		
+		return batata1;
+	}
+	
+	//Pega o quijo
+	public  int queijo (boolean j) {
+		
+		if(j == true) {
+			queijo1++;
+		}else if((j == false) && (queijo1 > 0)) {
+			queijo1--;
+		}
+		
+		return queijo1;
+	}
+	
+	//Pega o presunto
+	public  int presunto (boolean j) {
+		
+		if(j == true) {
+			presunto1++;
+		}else if((j == false) && (presunto1 > 0)) {
+			presunto1--;
+		}
+		
+		return presunto1;
+	}
+	
+	//Pega a cenoura
+	public  int cenoura (boolean j) {
+		
+		if(j == true) {
+			cenoura1++;
+		}else if((j == false) && (cenoura1 > 0)) {
+			cenoura1--;
+		}
+		
+		return cenoura1;
+	}
+	
+	//Pega o macarrao
+	public  int macarrao (boolean j) {
+		
+		if(j == true) {
+			macarrao1++;
+		}else if((j == false) && (macarrao1 > 0)) {
+			macarrao1--;
+		}
+		
+		return macarrao1;
+	}
+	
+//Soma tudo
+	public int somar() {
+		
+		int soma = arroz1+maca1+feijao1+macarrao1+cenoura1+queijo1+presunto1+batata1;
+		
+		return soma;
+	}
+	
+	//Lista
+	public ArrayList<String> lista() {
+		
+		ArrayList<String> listas = new ArrayList<String>();
+		
+		
+		listas.add(""+arroz1);
+		listas.add(""+batata1);
+		listas.add(""+cenoura1);
+		listas.add( ""+feijao1);
+		listas.add(""+macarrao1);
+		listas.add(""+queijo1);
+		listas.add(""+presunto1);
+		listas.add(""+maca1);
+		
+		
+		return listas;
+	}
+	
+	
+	
+	
+}
