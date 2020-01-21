@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="botaoAAA" onclick="criarQuadrado()">Clica aqui</button>
+
+
+    <div id="divDosQuadrados">
+
+
+    </div>
+
+
+    <script>
+    
+        var num = 0;
+
+       function criarQuadrado(){
+            
+            
+            num++;
+
+            //Cria o quadrado
+            let quadrado = document.createElement("div");
+
+            //Adiciona o quadrado a um elemento da dom
+            let div = document.getElementById("divDosQuadrados").appendChild(quadrado);
+
+            //Adiciona um id crescente aos quadrado
+            let text0 = "quadrado"+num;
+
+            quadrado.setAttribute("id", text0);
+
+            //Adciona uma funcao de hover
+            let text = "mudarcor("+num+")";
+
+            quadrado.setAttribute("onmouseover", text);
+
+            //Adiciona uma funcao de tirar o mouse
+            let textA = "mudarCorDnv("+num+")";
+
+            quadrado.setAttribute("onmouseout", textA);
+
+            
+
+            
+
+            //Adiociona um estilo aos quadrados
+            quadrado.style.width = "100px";
+            quadrado.style.height = "100px";
+
+            if(num % 2 === 0){
+                quadrado.style.backgroundColor = "red"
+            }else {
+                quadrado.style.backgroundColor = "yellow"
+            }
+
+            
+            quadrado.style.marginBottom = "5%"
+
+        }
+    
+        function mudarcor(id){
+
+            let text2 = "quadrado"+id
+
+            if(id % 2 === 0){
+                document.getElementById(text2).style.backgroundColor = "green"
+            }else {
+                document.getElementById(text2).style.backgroundColor = "blue"
+            }
+
+            
+
+        }
+
+        function mudarCorDnv(id){
+
+            let text2 = "quadrado"+id
+
+            if(id % 2 === 0){
+                document.getElementById(text2).style.backgroundColor = "red"
+            }else {
+                document.getElementById(text2).style.backgroundColor = "yellow"
+            }
+        }
+
+    </script>
+
+
+</body>
+</html>
